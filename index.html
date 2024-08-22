@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Cancelamento de Serviço</title>
+</head>
+<body>
+    <h1>Formulário de Pedido de Cancelamento de Serviço</h1>
+    <form method="get" action="cancelamento.jsp">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="data-cancelamento">Data do Pedido de Cancelamento:</label><br>
+        <input type="date" id="data-cancelamento" name="data-cancelamento" required><br><br>
+
+        <label>Tipo de Serviço:</label><br>
+        <input type="radio" id="servico1" name="tipoServico" value="Internet" required>
+        <label for="servico1">Internet</label><br>
+        <input type="radio" id="servico2" name="tipoServico" value="Telefone">
+        <label for="servico2">Telefone</label><br>
+        <input type="radio" id="servico3" name="tipoServico" value="TV a Cabo">
+        <label for="servico3">TV a Cabo</label><br><br>
+
+        <label for="razao-cancelamento">Razão para Cancelamento:</label><br>
+        <select id="razao-cancelamento" name="razao-cancelamento" required>
+            <option value="insatisfacao">Insatisfação</option>
+            <option value="custo">Custo elevado</option>
+            <option value="necessidade">Mudança de necessidade</option>
+            <option value="outra">Outra</option>
+        </select><br><br>
+
+        <label>Feedback Adicional (opções):</label><br>
+        <input type="checkbox" id="feedback1" name="feedback" value="serviço-lento">
+        <label for="feedback1">Serviço lento</label><br>
+        <input type="checkbox" id="feedback2" name="feedback" value="problema-atendimento">
+        <label for="feedback2">Problemas de atendimento</label><br>
+        <input type="checkbox" id="feedback3" name="feedback" value="outras-razões">
+        <label for="feedback3">Outras razões</label><br><br>
+
+        <label for="comentarios">Comentários ou Observações:</label><br>
+        <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Enviar Pedido de Cancelamento">
+    </form>
+</body>
+</html>
